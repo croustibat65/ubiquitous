@@ -2,11 +2,13 @@
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Net.WebSockets;
 using System.Text;
 
 class TcpServer
 {
     public Int32 port = 13000;
+    string status = "idle";
 
     public TcpServer()
     {
@@ -19,6 +21,7 @@ class TcpServer
     }
     public async void Start()
     {
+        
         TcpListener server = null;
 
         try
@@ -78,6 +81,7 @@ class TcpServer
         }
         catch (SocketException e)
         {
+            this.status = e.Message;
             //Console.WriteLine("SocketException: {0}", e);
         }
         finally

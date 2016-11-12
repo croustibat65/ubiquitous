@@ -132,7 +132,6 @@ namespace Test2
             if (dpv.Contains(StandardDataFormats.Text))
             {
                 string text = await dpv.GetTextAsync();
-                int a = 0;
                 // To output the text from this example, you need a TextBlock control
             }
         }
@@ -154,7 +153,6 @@ namespace Test2
                 Clipboard.SetContent(dp);
 
                 // To output the text from this example, you need a TextBlock control
-                int i = 0;
             }
         }
     }
