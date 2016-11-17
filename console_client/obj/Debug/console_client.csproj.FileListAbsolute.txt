@@ -1,0 +1,1 @@
+C:\code\ubiquitous\console_client\bin\Debug\console_client.exe.config
