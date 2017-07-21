@@ -1,2 +1,3 @@
-https://stackoverflow.com/questions/25900770/how-to-catch-the-clipboard-event-onchangeclipboard-equivalent-from-any-applica
-http://www.mono-project.com/docs/gui/gtksharp/
+clipborad interaction using gtk -> https://stackoverflow.com/questions/25900770/how-to-catch-the-clipboard-event-onchangeclipboard-equivalent-from-any-applica
+gtx for mono c# doc -> http://www.mono-project.com/docs/gui/gtksharp/
+tutorial for mono c# -> http://www.mono-project.com/docs/getting-started/mono-basics/
