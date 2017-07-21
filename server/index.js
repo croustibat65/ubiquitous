@@ -23,6 +23,7 @@ wss.on('connection', function (ws) {
   });
 
   ws.on('message', function incoming(message) {
+    console.log(message);
     for (let id in sockets) {
       if (id !== wsId) {
         sockets[id].send(message);

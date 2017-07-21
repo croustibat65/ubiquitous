@@ -30,7 +30,7 @@ namespace WPF_Client
         public MainWindow()
         {
             InitializeComponent();
-            client = new WebSocket("ws://192.168.1.19:8080", "", WebSocketVersion.None);
+            client = new WebSocket("ws://192.168.1.80:8080", "", WebSocketVersion.None);
             client.Open();
             client.MessageReceived += OnMessageReceived;
             //client.Opened += new EventHandler(SendSomething);
