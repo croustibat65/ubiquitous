@@ -1,1 +1,2 @@
 https://stackoverflow.com/questions/25900770/how-to-catch-the-clipboard-event-onchangeclipboard-equivalent-from-any-applica
+http://www.mono-project.com/docs/gui/gtksharp/
