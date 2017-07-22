@@ -30,17 +30,38 @@ namespace WPF_Client
         public MainWindow()
         {
             InitializeComponent();
-            client = new WebSocket("ws://192.168.1.80:8080", "", WebSocketVersion.None);
+            client = new WebSocket("ws://34.248.0.58:8080", "", WebSocketVersion.None);
             client.Open();
             client.MessageReceived += OnMessageReceived;
+            client.Closed += Client_Closed;
+            client.Error += Client_Error;
+            client.Opened += Client_Opened;
             //client.Opened += new EventHandler(SendSomething);
 
         }
 
+        private void Client_Opened(object sender, EventArgs e)
+        {
+            Console.WriteLine("Client Opened");
+        }
+
+        private void Client_Error(object sender, SuperSocket.ClientEngine.ErrorEventArgs e)
+        {
+            Console.WriteLine("Client Error: " + e.Exception.Message);
+            //throw e.Exception;
+        }
+
+        private void Client_Closed(object sender, EventArgs e)
+        {
+            Console.WriteLine("Client Closed");
+        }
+
         private void OnMessageReceived(object o, MessageReceivedEventArgs args)
         {
+            Console.WriteLine("Message received");
             if (this.text != args.Message)
             {
+                Console.WriteLine("Text message: " + args.Message);
                 Dispatcher.BeginInvoke((SetClipBoard) delegate(string message) {
                    Clipboard.SetText(args.Message);
                 }, args.Message);
