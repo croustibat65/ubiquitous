@@ -1,0 +1,2 @@
+clipboard manager android -> (bottom) https://forums.xamarin.com/discussion/41374/is-there-a-clipboard-plug-in-component-for-xamarin-forms
+                          -> https://forums.xamarin.com/discussion/56365/how-to-access-android-phone-clipboard

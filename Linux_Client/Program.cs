@@ -17,7 +17,7 @@ namespace Linux_Client
 			Application.Init ();
 
 			// Websocket Server
-			client = new WebSocket ("ws://192.168.0.24:8080"); //192.168.43.107
+			client = new WebSocket ("ws://34.248.0.158:8080"); 
 			client.Connect ();
 
 			// Events

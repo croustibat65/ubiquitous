@@ -2,4 +2,5 @@ clipborad interaction using gtk -> https://stackoverflow.com/questions/25900770/
 gtx for mono c# doc -> http://www.mono-project.com/docs/gui/gtksharp/
 tutorial for mono c# 1) helloworld -> http://www.mono-project.com/docs/getting-started/mono-basics/
                      2) gtk        -> http://www.mono-project.com/docs/gui/gtksharp/hello-world/
+websocket c# -> https://github.com/sta/websocket-sharp#secure-connection
 
