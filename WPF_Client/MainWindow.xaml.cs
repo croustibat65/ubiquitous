@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,18 +27,53 @@ namespace WPF_Client
     {
         private WebSocket client;
         private string text;
+        private String id;
         delegate void SetClipBoard(string content);
         public MainWindow()
         {
             InitializeComponent();
+
+            // id file read attempt
+             try
+            {   // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader("id.txt"))
+                {
+                    // get id from text file
+                    id = sr.ReadToEnd();
+                    Console.WriteLine("Opening clipboard session with user " + id);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Id file missing !");
+                throw e;
+            }
+
+
+
             client = new WebSocket("ws://34.248.0.158:8080", "", WebSocketVersion.None);
             client.Open();
             client.MessageReceived += OnMessageReceived;
             client.Closed += Client_Closed;
             client.Error += Client_Error;
             client.Opened += Client_Opened;
+
+            // sending id to server for prior identification
+
+            SendId();
+
             //client.Opened += new EventHandler(SendSomething);
 
+        }
+
+        private void SendId()
+        {
+            client.Send( "{'type':'id','name':'" + id + "'}" );
+        }
+
+        private void SendMessage(String msg)
+        {
+            client.Send( "{'type':'msg','name':'" + id + "','msg':'" + msg + "'}" );
         }
 
         private void Client_Opened(object sender, EventArgs e)
@@ -85,7 +121,7 @@ namespace WPF_Client
             if (Clipboard.ContainsText())
             {
                 this.text = Clipboard.GetText();
-                client.Send(this.text);
+                SendMessage(this.text);
             }
         }
     }
