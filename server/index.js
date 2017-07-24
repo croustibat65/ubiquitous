@@ -39,7 +39,20 @@ wss.on('connection', function (ws) {
   ws.on('message', function incoming(message) {
     
     // Deserialize the JSON object
-    var msgJson = JSON.parse(message);
+    var msgJson = {};
+
+    //avoid server crash with malformed json
+    try {
+
+      msgJson = JSON.parse(message);
+
+    } catch (e) {
+      //do nothing but logging the error
+      console.log("Error parsing the message");
+      console.log("Original message: ", message);
+      console.log(e.message);
+      return;
+    }
     var name = msgJson.name;
     var msg = msgJson.msg;
     var type = msgJson.type;
