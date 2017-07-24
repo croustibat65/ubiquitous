@@ -1,1 +1,0 @@
-secure websocket -> https://stackoverflow.com/questions/31338927/how-to-create-securetls-ssl-websocket-server

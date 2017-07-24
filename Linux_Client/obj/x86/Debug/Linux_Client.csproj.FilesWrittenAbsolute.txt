@@ -5,3 +5,12 @@
 /home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client/obj/x86/Debug/Linux_Client.exe
 /home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client/obj/x86/Debug/Linux_Client.exe.mdb
 /home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client/bin/Debug/websocket-sharp.dll
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client/bin/Debug/Newtonsoft.Json.dll
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/obj/x86/Debug/Linux_Client.gtk-gui.gui.stetic
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/bin/Debug/Linux_Client.exe.mdb
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/bin/Debug/Linux_Client.exe
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/obj/x86/Debug/Linux_Client.exe
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/obj/x86/Debug/Linux_Client.exe.mdb
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/bin/Debug/websocket-sharp.dll
+/home/lolo/Projet_Dev/Clipboard/ubiquitous/Linux_Client_2/bin/Debug/Newtonsoft.Json.dll
