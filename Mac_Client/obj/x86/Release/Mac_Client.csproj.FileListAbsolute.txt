@@ -1,0 +1,7 @@
+/Users/reMBP/Projects/Mac_Client/bin/Release/Mac_Client.exe
+/Users/reMBP/Projects/Mac_Client/bin/Release/websocket-sharp.dll
+/Users/reMBP/Projects/Mac_Client/obj/x86/Release/actool/partial-info.plist
+/Users/reMBP/Projects/Mac_Client/obj/x86/Release/actool/asset-manifest.plist
+/Users/reMBP/Projects/Mac_Client/obj/x86/Release/actool/bundle/AppIcon.icns
+/Users/reMBP/Projects/Mac_Client/obj/x86/Release/Mac_Client.csproj.CoreCompileInputs.cache
+/Users/reMBP/Projects/Mac_Client/obj/x86/Release/Mac_Client.exe
