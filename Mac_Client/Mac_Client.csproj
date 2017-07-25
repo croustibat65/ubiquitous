@@ -49,7 +49,10 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\Documents\Projet_Dev\ubiquitous-master\Mac_Client\lib\websocket-sharp.dll</HintPath>
+      <HintPath>lib\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

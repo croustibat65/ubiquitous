@@ -1,6 +1,13 @@
-25/07/2017 21:49:50|Fatal|<>c__DisplayClass17.<startReceiving>b__16|WebSocketSharp.WebSocketException: The header of a frame cannot be read from the stream.
+Clipboard: 'OpenText' sent
+Clipboard: 'msgJson' sent
+Clipboard: 'client.Connect();
+			msgJson message = new msgJson("id");
+			string sMsgJson =' sent
+25/07/2017 22:37:27|Fatal|<>c__DisplayClass17.<startReceiving>b__16|WebSocketSharp.WebSocketException: The header of a frame cannot be read from the stream.
                             at WebSocketSharp.WebSocketFrame.processHeader (System.Byte[] header) [0x00017] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
                             at WebSocketSharp.WebSocketFrame+<>c__DisplayClassa.<readHeaderAsync>b__9 (System.Byte[] bytes) [0x00000] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
                             at WebSocketSharp.Ext+<>c__DisplayClass9.<ReadBytesAsync>b__8 (System.IAsyncResult ar) [0x000a2] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-25/07/2017 21:50:28|Error|WebSocket.Send|This operation isn't available in: closed
-25/07/2017 21:51:38|Error|WebSocket.Send|This operation isn't available in: closed
+25/07/2017 22:40:14|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'id.txt' sent
+25/07/2017 22:41:37|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'id.txt' sent

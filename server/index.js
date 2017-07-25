@@ -53,6 +53,7 @@ wss.on('connection', function (ws) {
       console.log(e.message);
       return;
     }
+
     var name = msgJson.name;
     var msg = msgJson.msg;
     var type = msgJson.type;

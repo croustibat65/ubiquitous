@@ -1,3 +1,5 @@
+_xamarin_timezone_get_names
+_xamarin_timezone_get_data
 _xamarin_nfloat_objc_msgSend
 _xamarin_nfloat_objc_msgSendSuper
 _xamarin_IntPtr_objc_msgSend_IntPtr
@@ -306,8 +308,6 @@ _xamarin_localized_string_format_8
 _xamarin_localized_string_format_9
 _xamarin_init_nsthread
 _xamarin_get_block_descriptor
-_xamarin_timezone_get_names
-_xamarin_timezone_get_data
 _xamarin_dyn_objc_msgSend
 _xamarin_dyn_objc_msgSendSuper
 _xamarin_dyn_objc_msgSend_stret

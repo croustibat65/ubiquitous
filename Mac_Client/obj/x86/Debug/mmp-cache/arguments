@@ -3,7 +3,7 @@
 /Library/Frameworks/Xamarin.Mac.framework/Versions/3.4.0.36/lib/mmp/mmp.exe \
 	/verbose \
 	/debug \
-	/output:/Users/reMBP/Projects/Mac_Client/bin/Debug/ \
+	/output:/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/ \
 	/name:Mac_Client \
 	/profile:Xamarin.Mac \
 	/arch:x86_64 \
@@ -11,12 +11,13 @@
 	/minos=10.7 \
 	/nolink \
 	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/mscorlib.dll \
+	/assembly:/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/lib/Newtonsoft.Json.dll \
 	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/System.Core.dll \
 	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/System.dll \
-	/assembly:/Users/reMBP/Documents/Projet_Dev/ubiquitous-master/Mac_Client/lib/websocket-sharp.dll \
+	/assembly:/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/lib/websocket-sharp.dll \
 	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/Xamarin.Mac.dll \
-	/Users/reMBP/Projects/Mac_Client/bin/Debug/Mac_Client.exe \
+	/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/Mac_Client.exe \
 	/sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
-	/Users/reMBP/Projects/Mac_Client/obj/x86/Debug/mmp-cache \
+	/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/mmp-cache \
