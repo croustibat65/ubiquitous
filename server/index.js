@@ -70,7 +70,8 @@ wss.on('connection', function (ws) {
           if (nicknames[id] == name) {
           	if (id !== wsId) {
               sockets[id].send(message);
-        	  console.log(msg+" sent from " + wsId + " to " + id);
+              console.log(msg+" sent");
+        	  //console.log(msg+" sent from " + wsId + " to " + id);
         	  }
           }
         }
