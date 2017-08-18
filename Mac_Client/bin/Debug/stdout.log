@@ -1,13 +1,138 @@
-Clipboard: 'OpenText' sent
-Clipboard: 'msgJson' sent
-Clipboard: 'client.Connect();
-			msgJson message = new msgJson("id");
-			string sMsgJson =' sent
-25/07/2017 22:37:27|Fatal|<>c__DisplayClass17.<startReceiving>b__16|WebSocketSharp.WebSocketException: The header of a frame cannot be read from the stream.
+Clipboard: 'Mac_Client_2' sent
+Clipboard: 'express' sent
+Clipboard: 'Projet_Dev' sent
+Clipboard: 'ubiquitous' sent
+Clipboard: 'MacBook' sent
+Clipboard: 'Pro' sent
+Clipboard: 'server' sent
+Clipboard: 'reMBP' sent
+Clipboard: 'MacBook' sent
+Clipboard: 'MonoBundle' sent
+18/08/2017 22:30:50|Fatal|<>c__DisplayClass17.<startReceiving>b__16|WebSocketSharp.WebSocketException: The header of a frame cannot be read from the stream.
                             at WebSocketSharp.WebSocketFrame.processHeader (System.Byte[] header) [0x00017] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
                             at WebSocketSharp.WebSocketFrame+<>c__DisplayClassa.<readHeaderAsync>b__9 (System.Byte[] bytes) [0x00000] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
                             at WebSocketSharp.Ext+<>c__DisplayClass9.<ReadBytesAsync>b__8 (System.IAsyncResult ar) [0x000a2] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-25/07/2017 22:40:14|Error|WebSocket.Send|This operation isn't available in: closed
-Clipboard: 'id.txt' sent
-25/07/2017 22:41:37|Error|WebSocket.Send|This operation isn't available in: closed
-Clipboard: 'id.txt' sent
+18/08/2017 22:33:34|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'console.log("Message received: "+msg);
+        ' sent
+18/08/2017 22:35:01|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'server' sent
+18/08/2017 22:37:14|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'Mac_Client.app' sent
+18/08/2017 22:38:09|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: ':' sent
+18/08/2017 22:38:19|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'MacBook-Pro:Debug reMBP$ 
+
+
+
+
+
+
+
+
+
+' sent
+18/08/2017 22:41:12|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'server' sent
+18/08/2017 22:41:20|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'b455' sent
+18/08/2017 22:45:30|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: '//if (id !== wsId) {' sent
+18/08/2017 22:46:28|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'reMBP' sent
+18/08/2017 22:46:36|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'reMBP' sent
+18/08/2017 22:48:13|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'Mac_Client.app' sent
+18/08/2017 22:48:19|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: 'reMBP' sent
+18/08/2017 22:48:37|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: '8f64eee0' sent
+18/08/2017 22:48:56|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: '"use strict";  
+var WebSocketServer = require('ws').Server;
+var express = require('express');
+var path = require('path');
+var app = express.createServer();
+var uuid = require('uuid');
+
+
+
+
+
+
+app.use(express.static(path.join(__dirname, '/public')));
+app.listen(8080);
+
+let sockets = [];
+let nicknames = [];
+
+var wss = new WebSocketServer({ server: app });
+
+
+
+
+
+wss.on('connection', function (ws) {
+  "use strict";  
+
+
+
+  let wsId = uuid.v1();
+  sockets[wsId] = ws;
+  console.log("client connected");
+
+  ws.on('close', function () {
+    delete sockets[wsId];
+    console.log('client disconnected');
+  });
+
+  ws.on('message', function incoming(message) {
+    
+    // Deserialize the JSON object
+    var msgJson = {};
+
+    //avoid server crash with malformed json
+    try {
+
+      msgJson = JSON.parse(message);
+
+    } catch (e) {
+      //do nothing but logging the error
+      console.log("Error parsing the message");
+      console.log("Original message: ", message);
+      console.log(e.message);
+      return;
+    }
+
+    var name = msgJson.name;
+    var msg  = msgJson.msg;
+    var type = msgJson.type;
+    
+    // Test identification or message
+    switch(type){
+      case ("id") :
+        nicknames[wsId] = name;
+        console.log("client name: "+name);
+        break;
+      case ("msg") :
+        console.log(msg+" received");
+        for (let id in sockets) {
+          if (nicknames[id] == name) {
+          	if (id !== wsId) {
+              sockets[id].send(message);
+        	  console.log(msg+" sent from " + wsId + " to " + id);
+        	  }
+          }
+        }
+        break;
+    }
+
+
+
+    
+    
+  });
+});
+' sent

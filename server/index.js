@@ -55,21 +55,23 @@ wss.on('connection', function (ws) {
     }
 
     var name = msgJson.name;
-    var msg = msgJson.msg;
+    var msg  = msgJson.msg;
     var type = msgJson.type;
     
     // Test identification or message
     switch(type){
       case ("id") :
         nicknames[wsId] = name;
-        console.log("client name = "+name);
+        console.log("client name: "+name);
         break;
       case ("msg") :
-        console.log(msg);
+        console.log(msg+" received");
         for (let id in sockets) {
-          //if (id !== wsId) {
-          if (nicknames[id] !== name) {
-            sockets[id].send(message);
+          if (nicknames[id] == name) {
+          	if (id !== wsId) {
+              sockets[id].send(message);
+        	  console.log(msg+" sent from " + wsId + " to " + id);
+        	  }
           }
         }
         break;

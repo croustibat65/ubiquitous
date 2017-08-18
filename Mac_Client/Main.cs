@@ -34,19 +34,20 @@ namespace Mac_Client
         static public NSPasteboard pasteboard;// = NSPasteboard.GeneralPasteboard;
 		private static string[] pboardTypes = new string[] { "NSStringPboardType" };
 		static private WebSocket client;
+        static nint timeCount;
 
 
 
 		static void Main(string[] args)
 		{
-			NSApplication.Init();
+            NSApplication.Init();
 
 			// Websocket Server
 			//client = new WebSocket ("ws://34.248.0.158:8080"); 
-			client = new WebSocket("ws://192.168.1.64:8080");
+			client = new WebSocket("ws://192.168.0.39:8080");
 
 			// Connexion + send ID
-			client.Connect();
+            client.Connect();
 			msgJson message = new msgJson("id");
 			string sMsgJson = JsonConvert.SerializeObject(message);
 			client.Send(sMsgJson);
@@ -59,7 +60,7 @@ namespace Mac_Client
 			client.OnMessage += PasteClipboard;
 
 			// Copy/Sending
-			var timeCount = pasteboard.ChangeCount;
+			timeCount = pasteboard.ChangeCount;
 			var sampleTimer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.5), delegate
 			{
 				if (timeCount != pasteboard.ChangeCount)
@@ -78,6 +79,7 @@ namespace Mac_Client
 			Console.WriteLine(e.Data);
 			//pasteboard.DeclareTypes(pboardTypes, null);
 			pasteboard.SetStringForType(e.Data, pboardTypes[0]);
+            timeCount = pasteboard.ChangeCount;
 		}
 
 

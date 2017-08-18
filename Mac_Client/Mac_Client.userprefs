@@ -1,22 +1,8 @@
 ﻿<Properties StartupConfiguration="{49E20588-6896-4006-867E-F22670A90C6D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../server/index.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
     <Files>
-      <File FileName="Main.cs" Line="55" Column="4" />
-      <File FileName="../Linux_Client/Program.cs" Line="33" Column="27" />
-      <File FileName="../server/index.js" Line="6" Column="18" />
+      <File FileName="Main.cs" Line="82" Column="48" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Mac_Client" expanded="True">
-            <Node name="Mac_Client" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Main.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
