@@ -6,11 +6,9 @@
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/actool/asset-manifest.plist
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/actool/bundle/AppIcon.icns
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool-manifests/MainMenu.nib
-/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool-manifests/MainWindow.nib
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool-manifests/AppController.nib
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool/AppController.nib
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool/MainMenu.nib
-/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/ibtool/MainWindow.nib
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/Mac_Client.csproj.CoreCompileInputs.cache
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/Mac_Client.exe
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/obj/x86/Debug/Mac_Client.pdb

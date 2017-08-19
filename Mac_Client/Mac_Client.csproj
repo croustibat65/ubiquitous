@@ -74,23 +74,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="MainWindow.cs" />
-    <Compile Include="MainWindow.designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindowController.cs" />
-    <Compile Include="MainWindowController.designer.cs">
-      <DependentUpon>MainWindowController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppDelegate.cs" />
     <Compile Include="AppController.cs" />
     <Compile Include="AppController.designer.cs">
       <DependentUpon>AppController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainMenu.xib" />
-    <InterfaceDefinition Include="MainWindow.xib" />
     <InterfaceDefinition Include="AppController.xib" />
   </ItemGroup>
   <ItemGroup>
