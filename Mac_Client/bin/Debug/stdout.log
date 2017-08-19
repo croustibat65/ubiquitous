@@ -1,0 +1,20 @@
+19/08/2017 22:55:01|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
+                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
+                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+19/08/2017 22:55:01|Error|WebSocket.Send|This operation isn't available in: closed
+19/08/2017 22:55:11|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
+                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
+                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+19/08/2017 22:55:11|Error|WebSocket.Send|This operation isn't available in: closed
+19/08/2017 22:55:14|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
+                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
+                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+19/08/2017 22:55:14|Error|WebSocket.Send|This operation isn't available in: closed
+19/08/2017 22:57:59|Error|WebSocket.Send|This operation isn't available in: closed
+Clipboard: '' sent
