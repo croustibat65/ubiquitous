@@ -2,7 +2,7 @@
 #include <xamarin/xamarin.h>
 #import <AppKit/NSAlert.h>
 #import <Foundation/NSDate.h>
-extern int xamarin_create_classes_Xamarin_Mac ();
+extern "C" void xamarin_create_classes_Xamarin_Mac ();
 
 
 
@@ -13,6 +13,7 @@ extern "C" int xammac_setup ()
 	xamarin_create_classes_Xamarin_Mac ();
 	xamarin_debug_mode = TRUE;
 	setenv ("MONO_GC_PARAMS", "major=marksweep", 1);
+	xamarin_mac_modern = TRUE;
 	return 0;
 }
 

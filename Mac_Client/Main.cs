@@ -1,7 +1,6 @@
 ﻿using AppKit;
 using System;
 using WebSocketSharp;
-using WebSocketSharp.Net;
 using Newtonsoft.Json;
 using Foundation;
 using System.IO;
@@ -19,7 +18,7 @@ namespace Mac_Client
 		// constructor
 		public msgJson(string s)
 		{
-            name = File.OpenText("../../../../../id.txt").ReadToEnd();
+			name = File.OpenText("../../../../../id.txt").ReadToEnd();
 			msg = null;
 			type = s;
 		}
@@ -30,31 +29,31 @@ namespace Mac_Client
 	static class MainClass
 	{
 
-        // Private Variables
-        static public NSPasteboard pasteboard;// = NSPasteboard.GeneralPasteboard;
+		// Private Variables
+		static public NSPasteboard pasteboard;// = NSPasteboard.GeneralPasteboard;
 		private static string[] pboardTypes = new string[] { "NSStringPboardType" };
 		static private WebSocket client;
-        static nint timeCount;
+		static nint timeCount;
 
 
 
 		static void Main(string[] args)
 		{
-            NSApplication.Init();
+			NSApplication.Init();
 
 			// Websocket Server
 			//client = new WebSocket ("ws://34.248.0.158:8080"); 
 			client = new WebSocket("ws://192.168.0.39:8080");
 
 			// Connexion + send ID
-            client.Connect();
+			client.Connect();
 			msgJson message = new msgJson("id");
 			string sMsgJson = JsonConvert.SerializeObject(message);
 			client.Send(sMsgJson);
 
 			// Pasteboard declaration
 			pasteboard = NSPasteboard.GeneralPasteboard;
-			pasteboard.SetStringForType("test",pboardTypes[0]);
+			pasteboard.SetStringForType("test", pboardTypes[0]);
 
 			// Paste/Reception
 			client.OnMessage += PasteClipboard;
@@ -79,7 +78,7 @@ namespace Mac_Client
 			Console.WriteLine(e.Data);
 			//pasteboard.DeclareTypes(pboardTypes, null);
 			pasteboard.SetStringForType(e.Data, pboardTypes[0]);
-            timeCount = pasteboard.ChangeCount;
+			timeCount = pasteboard.ChangeCount;
 		}
 
 
@@ -90,12 +89,12 @@ namespace Mac_Client
 			// Json
 			msgJson message = new msgJson("msg");
 			//message.type = "msg";
-            message.msg = pasteboard.GetStringForType(pboardTypes[0]);
+			message.msg = pasteboard.GetStringForType(pboardTypes[0]);
 			string sMsgJson = JsonConvert.SerializeObject(message);
 
 			// Sending JSON
 			client.Send(sMsgJson);
-            Console.WriteLine("Clipboard: '" + pasteboard.GetStringForType(pboardTypes[0]) + "' sent");
+			Console.WriteLine("Clipboard: '" + pasteboard.GetStringForType(pboardTypes[0]) + "' sent");
 		}
 
 

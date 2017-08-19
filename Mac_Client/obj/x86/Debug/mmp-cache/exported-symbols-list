@@ -308,6 +308,7 @@ _xamarin_localized_string_format_8
 _xamarin_localized_string_format_9
 _xamarin_init_nsthread
 _xamarin_get_block_descriptor
+_mono_pmip
 _xamarin_dyn_objc_msgSend
 _xamarin_dyn_objc_msgSendSuper
 _xamarin_dyn_objc_msgSend_stret

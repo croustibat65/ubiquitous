@@ -1,11 +1,11 @@
-# Version: 3.4.0.36 (d15-2: d2270eec)
-# [first argument, ignore] # /Library/Frameworks/Xamarin.Mac.framework/Versions/3.4.0.36/lib/mmp/mmp.exe
-/Library/Frameworks/Xamarin.Mac.framework/Versions/3.4.0.36/lib/mmp/mmp.exe \
+# Version: 3.6.0.17 (d15-3: 4a279c9a)
+# [first argument, ignore] # /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/lib/mmp/mmp.exe
+/Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/lib/mmp/mmp.exe \
 	/verbose \
 	/debug \
 	/output:/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/ \
 	/name:Mac_Client \
-	/profile:Xamarin.Mac \
+	/profile:Xamarin.Mac,Version=v2.0,Profile=Mobile \
 	/arch:x86_64 \
 	--http-message-handler=HttpClientHandler \
 	/minos=10.7 \

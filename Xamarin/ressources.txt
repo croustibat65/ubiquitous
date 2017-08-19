@@ -1,2 +1,3 @@
 clipboard manager android -> (bottom) https://forums.xamarin.com/discussion/41374/is-there-a-clipboard-plug-in-component-for-xamarin-forms
                           -> https://forums.xamarin.com/discussion/56365/how-to-access-android-phone-clipboard
+notification icon mac:    -> https://stackoverflow.com/questions/17625291/creating-a-windowless-menu-bar-icon-application-in-monomac-xamarin-c-sharp   (with example)                        

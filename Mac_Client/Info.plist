@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>Mac_Client</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ruir.mac_client</string>
+	<string>com.ruir.Mac_Client</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -21,14 +21,14 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>${AuthorCopyright}</string>
+	<string>${AuthorCopyright:HtmlEncode}</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
-	<key>LSUIElement</key>
-	<true/>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
