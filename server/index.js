@@ -69,7 +69,7 @@ wss.on('connection', function (ws) {
         for (let id in sockets) {
           if (nicknames[id] == name) {
           	if (id !== wsId) {
-              sockets[id].send(message);
+              sockets[id].send(msg);
               console.log(msg+" sent");
         	  //console.log(msg+" sent from " + wsId + " to " + id);
         	  }
