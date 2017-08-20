@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Foundation;
 using System.IO;
 
+
 namespace Mac_Client
 {
 
@@ -39,7 +40,6 @@ namespace Mac_Client
 
 			// Pasteboard declaration
 			pasteboard = NSPasteboard.GeneralPasteboard;
-			pasteboard.SetStringForType("test", pboardTypes[0]);
 
 			// Paste/Reception
 			client.OnMessage += PasteClipboard;
@@ -61,7 +61,7 @@ namespace Mac_Client
         public void serverConnexion()
         {
 			client.Connect();
-			msgJson message = new msgJson("id");
+			MsgJSON message = new MsgJSON("id");
 			string sMsgJson = JsonConvert.SerializeObject(message);
 			client.Send(sMsgJson);
 
@@ -81,23 +81,38 @@ namespace Mac_Client
 
 
         // Receive clipboard
-        public static void PasteClipboard(object sender, MessageEventArgs e)
+        public void PasteClipboard(object sender, MessageEventArgs e)
 		{
-			pasteboard.SetStringForType(e.Data, pboardTypes[0]);
-			timeCount = pasteboard.ChangeCount;
+            // Decryption
+            string encryptedMsg = e.Data;
+            string decryptedMsg = StringCipher.Decrypt(encryptedMsg, "pwd");
+
+            // Pasteboard Management
+            InvokeOnMainThread(() =>
+            {
+                pasteboard.SetStringForType(decryptedMsg, pboardTypes[0]);
+                timeCount = pasteboard.ChangeCount;
+            });
+
+            // Debug
+			Console.WriteLine(decryptedMsg + " received");
+
+
 		}
 
 
 		// Send Clipboard
 		public static void sendClipboard()
 		{
-			// Json
-			msgJson message = new msgJson("msg");
-			//message.type = "msg";
-			message.msg = pasteboard.GetStringForType(pboardTypes[0]);
+            // Encryption of the pasteboard
+            string encryptedMsg = StringCipher.Encrypt(pasteboard.GetStringForType(pboardTypes[0]), "pwd");
+
+            // JSON
+			MsgJSON message = new MsgJSON("msg");
+            message.msg = encryptedMsg;
 			string sMsgJson = JsonConvert.SerializeObject(message);
 
-			// Sending JSON
+			// Sending 
 			client.Send(sMsgJson);
 			Console.WriteLine("Clipboard: '" + pasteboard.GetStringForType(pboardTypes[0]) + "' sent");
 		}

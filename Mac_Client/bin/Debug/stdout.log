@@ -1,20 +1,29 @@
-19/08/2017 22:55:01|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
-                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
-                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-19/08/2017 22:55:01|Error|WebSocket.Send|This operation isn't available in: closed
-19/08/2017 22:55:11|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
-                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
-                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-19/08/2017 22:55:11|Error|WebSocket.Send|This operation isn't available in: closed
-19/08/2017 22:55:14|Fatal|WebSocket.connect|System.Net.Sockets.SocketException (0x80004005): Connection refused
-                            at System.Net.Sockets.TcpClient..ctor (System.String hostname, System.Int32 port) [0x0006d] in /Library/Frameworks/Xamarin.Mac.framework/Versions/3.6.0.17/src/mono/mcs/class/referencesource/System/net/System/Net/Sockets/TCPClient.cs:122 
-                            at WebSocketSharp.WebSocket.setClientStream () [0x0006b] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.doHandshake () [0x00001] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-                            at WebSocketSharp.WebSocket.connect () [0x0004d] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
-19/08/2017 22:55:14|Error|WebSocket.Send|This operation isn't available in: closed
-19/08/2017 22:57:59|Error|WebSocket.Send|This operation isn't available in: closed
-Clipboard: '' sent
+Clipboard: 'Mac_Client.app' sent
+43aa585262f2 received
+Clipboard: 'client' sent
+D2a6kNqYFd5SPjLxveoZaJzKC88C8PZJr received
+Clipboard: 'received' sent
+Clipboard: 'ruireur' sent
+disconnected received
+disconnected received
+disconnected received
+disconnected received
+Clipboard: 'disconnected' sent
+Clipboard: 'disconnected' sent
+Clipboard: 'disconnected' sent
+Clipboard: 'disconnected' sent
+disconnected received
+disconnected received
+disconnected received
+Clipboard: 'disconnected' sent
+Clipboard: 'disconnected' sent
+disconnected received
+disconnected received
+Clipboard: 'disconnected' sent
+disconnected received
+Clipboard: 'disconnected' sent
+Clipboard: 'disconnected' sent
+20/08/2017 11:12:13|Fatal|<>c__DisplayClass17.<startReceiving>b__16|WebSocketSharp.WebSocketException: The header of a frame cannot be read from the stream.
+                            at WebSocketSharp.WebSocketFrame.processHeader (System.Byte[] header) [0x00017] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.WebSocketFrame+<>c__DisplayClassa.<readHeaderAsync>b__9 (System.Byte[] bytes) [0x00000] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 
+                            at WebSocketSharp.Ext+<>c__DisplayClass9.<ReadBytesAsync>b__8 (System.IAsyncResult ar) [0x000a2] in <38d3cef14c5a4fc9a92de0991034bc1a>:0 

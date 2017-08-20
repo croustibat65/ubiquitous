@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{DBA5ED59-83B6-45F7-850E-9C0DBAC63591}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
     <Files>
-      <File FileName="AppDelegate.cs" Line="112" Column="40" />
-      <File FileName="AppDelegate.designer.cs" Line="37" Column="1" />
-      <File FileName="Main.cs" Line="27" Column="5" />
+      <File FileName="AppDelegate.cs" Line="113" Column="34" />
+      <File FileName="Main.cs" Line="15" Column="5" />
+      <File FileName="../../Downloads/EncryptStringSample/EncryptStringSample/Program.cs" Line="16" Column="80" />
+      <File FileName="StringCypher.cs" Line="39" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
