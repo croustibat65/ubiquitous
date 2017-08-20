@@ -6,8 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/reMBP/Projects/Mac_Client_bug/obj/x86/Debug/actool/bundle/AppIcon.icns</string>
-			<string>/Users/reMBP/Projects/Mac_Client_bug/obj/x86/Debug/actool/partial-info.plist</string>
+			<string>/Users/reMBP/Projects/Mac_Client/obj/x86/Debug/actool/bundle/AppIcon.icns</string>
+			<string>/Users/reMBP/Projects/Mac_Client/obj/x86/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

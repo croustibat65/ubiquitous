@@ -5,6 +5,8 @@
       <File FileName="Main.cs" Line="15" Column="5" />
       <File FileName="../../Downloads/EncryptStringSample/EncryptStringSample/Program.cs" Line="16" Column="80" />
       <File FileName="StringCypher.cs" Line="39" Column="21" />
+      <File FileName="MsgJSON.cs" Line="1" Column="1" />
+      <File FileName="AppController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

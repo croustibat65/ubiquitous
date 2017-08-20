@@ -26,10 +26,14 @@ namespace Mac_Client
 		private static string[] pboardTypes = new string[] { "NSStringPboardType" };
 		static private WebSocket client;
 		static nint timeCount;
+        static string pwd;
 
         // Entry Point
 		public override void DidFinishLaunching(NSNotification notification)
 		{
+            // Open Password Information
+            StreamReader Sr = File.OpenText("../../../../../id.txt");
+            Sr.ReadLine(); pwd = Sr.ReadLine();
 
 			// Websocket Server
 			//client = new WebSocket ("ws://34.248.0.158:8080"); 
@@ -85,7 +89,7 @@ namespace Mac_Client
 		{
             // Decryption
             string encryptedMsg = e.Data;
-            string decryptedMsg = StringCipher.Decrypt(encryptedMsg, "pwd");
+            string decryptedMsg = StringCipher.Decrypt(encryptedMsg, pwd);
 
             // Pasteboard Management
             InvokeOnMainThread(() =>
@@ -105,7 +109,7 @@ namespace Mac_Client
 		public static void sendClipboard()
 		{
             // Encryption of the pasteboard
-            string encryptedMsg = StringCipher.Encrypt(pasteboard.GetStringForType(pboardTypes[0]), "pwd");
+            string encryptedMsg = StringCipher.Encrypt(pasteboard.GetStringForType(pboardTypes[0]), pwd);
 
             // JSON
 			MsgJSON message = new MsgJSON("msg");
