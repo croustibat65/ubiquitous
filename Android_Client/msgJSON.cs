@@ -1,5 +1,4 @@
-﻿using System.IO;
-
+﻿
 
 namespace Android_Client
 {
@@ -13,7 +12,8 @@ namespace Android_Client
 		// constructor
 		public MsgJSON(string s)
 		{
-            name = "ruireur";//File.OpenText("../../../id.txt").ReadLine();
+
+            name = MainActivity.id;
 			msg = null;
 			type = s;
 		}

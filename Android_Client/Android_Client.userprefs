@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{1F4DDDC9-FE66-4ABC-8D59-B0E7A7ED67A3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WatchClipboard.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="WatchClipboard.cs" Line="19" Column="42" />
-      <File FileName="msgJSON.cs" Line="16" Column="32" />
-      <File FileName="StringCypher.cs" Line="7" Column="25" />
+      <File FileName="WatchClipboard.cs" Line="91" Column="16" />
+      <File FileName="MainActivity.cs" Line="55" Column="42" />
+      <File FileName="../Mac_Client/AppDelegate.cs" Line="138" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -12,5 +12,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Android__Client PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.Android__Client AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
 </Properties>

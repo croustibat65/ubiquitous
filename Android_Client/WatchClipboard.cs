@@ -2,10 +2,8 @@
 using Android.Content;
 using Android.OS;
 using Android.Util;
-using Android.Widget;
 using WebSocketSharp;
 using Newtonsoft.Json;
-using System.IO;
 
 
 namespace Android_Client
@@ -21,8 +19,7 @@ namespace Android_Client
 		static ClipboardManager clipBoard;
         static ClipboardManager.IOnPrimaryClipChangedListener ruir;
 		// Websocket
-		static private WebSocket client;
-		static string pwd;
+		static public WebSocket client = new WebSocket("ws://192.168.1.64:8080");
  
 
 
@@ -46,28 +43,21 @@ namespace Android_Client
 			{
                 isStarted = true;
 
-                // Open Password Information
-                //StreamReader Sr = File.OpenText("id.txt");
-                //Sr.ReadLine(); pwd = Sr.ReadLine();
-                pwd = "passwd";
-
 				// Websocket Server
 				//client = new WebSocket ("ws://34.248.0.158:8080"); 
-				client = new WebSocket("ws://192.168.1.64:8080");
+				//client = new WebSocket("ws://192.168.1.64:8080");
 
 				// Connexion + send ID
 				serverConnexion();
 
                 // Clipboard Manager
 				ruir = new MyClipChangedListener();
+
+                // Clipboard Listener
 				clipBoard.AddPrimaryClipChangedListener(ruir);
 
 				// Paste/Reception
 				client.OnMessage += ReceiveClipboard;
-
-
-
-
 
 
 			}
@@ -95,6 +85,12 @@ namespace Android_Client
 
             // Android
 			Log.Debug(TAG, $"Quitting");
+
+            // Button
+            MainActivity.serverButton.Text = ("Login/Logout");
+			MainActivity.serverButton.Enabled = false;
+
+
 			base.OnDestroy();
 		}
 
@@ -103,9 +99,7 @@ namespace Android_Client
         {
 
 			// Encryption of the pasteboard
-			//string decryptedMsg = clipBoard.PrimaryClip.GetItemAt(0).Text;
-			//string encryptedMsg = StringCipher.Encrypt(decryptedMsg,pwd);
-            string encryptedMsg = StringCipher.Encrypt(clipBoard.Text, pwd);
+            string encryptedMsg = StringCipher.Encrypt(clipBoard.Text, MainActivity.pwd);
 
 			// JSON
 			MsgJSON message = new MsgJSON("msg");
@@ -115,16 +109,13 @@ namespace Android_Client
 			// Sending 
 			client.Send(sMsgJson);
 
-            // Debug
-            Log.Debug("lol", clipBoard.Text);
-
 		}
 
 
         public static void ReceiveClipboard(object sender, MessageEventArgs e)
         {
 			// Decryption
-			string decryptedMsg = StringCipher.Decrypt(e.Data, pwd);
+			string decryptedMsg = StringCipher.Decrypt(e.Data, MainActivity.pwd);
 
             // Setting the clipboard without resending it
             clipBoard.RemovePrimaryClipChangedListener(ruir);
@@ -135,23 +126,26 @@ namespace Android_Client
 
 
 		// Connect + Send ID
-		public void serverConnexion()
+		public static void serverConnexion()
 		{
 			client.Connect();
-			MsgJSON message = new MsgJSON("id");
-			string sMsgJson = JsonConvert.SerializeObject(message);
-			client.Send(sMsgJson);
+            if (client.IsAlive)
+            {
+				MsgJSON message = new MsgJSON("id");
+				string sMsgJson = JsonConvert.SerializeObject(message);
+				client.Send(sMsgJson);
+                MainActivity.serverButton.Text = ("Logout");
+				MainActivity.connexionStatus.Text = "OnLine";
+			}
+            else
+            {
+                MainActivity.serverButton.Text = ("Login");
+				MainActivity.connexionStatus.Text = "OffLine";
+			}
+            MainActivity.serverButton.Enabled = true;
 
-			//if (client.IsAlive)
-			//{
-			//	connexionStatus.Title = "Status: OnLine";
-			//	connectDisconnectTitle.Title = "Log Out";
-			//}
-			//else
-			//{
-			//	connexionStatus.Title = "Status: OffLine";
-			//	connectDisconnectTitle.Title = "Log In";
-			//}
+
+
 
 		}
 
@@ -168,7 +162,6 @@ namespace Android_Client
 
 		public void OnPrimaryClipChanged()
 		{
-            // Selection of the clipBoard
 
             WatchClipboard.sendClipboard();
 		}

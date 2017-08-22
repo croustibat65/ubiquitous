@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{DBA5ED59-83B6-45F7-850E-9C0DBAC63591}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
     <Files>
-      <File FileName="AppDelegate.cs" Line="97" Column="27" />
+      <File FileName="AppDelegate.cs" Line="73" Column="29" />
       <File FileName="MsgJSON.cs" Line="23" Column="1" />
       <File FileName="StringCypher.cs" Line="105" Column="1" />
-      <File FileName="Main.cs" Line="19" Column="4" />
+      <File FileName="Main.cs" Line="11" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
