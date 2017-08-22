@@ -39,7 +39,7 @@ namespace Android_Client
 
             // Service Button management
             serviceButton = FindViewById<Button>(Resource.Id.serviceButton);
-			serverButton = FindViewById<Button>(Resource.Id.serverButton);
+			serverButton  = FindViewById<Button>(Resource.Id.serverButton);
 			if (isStarted == false)
             {
 				serviceButton.Text = ("Start Service");

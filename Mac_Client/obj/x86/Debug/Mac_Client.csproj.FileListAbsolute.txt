@@ -28,7 +28,6 @@
 /Users/reMBP/Projects/Mac_Client_bug/obj/x86/Debug/Mac_Client.csproj.CoreCompileInputs.cache
 /Users/reMBP/Projects/Mac_Client_bug/obj/x86/Debug/Mac_Client.exe
 /Users/reMBP/Projects/Mac_Client_bug/obj/x86/Debug/Mac_Client.pdb
-/Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/id.txt
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/Mac_Client.exe
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/Mac_Client.pdb
 /Users/reMBP/Documents/Projet_Dev/ubiquitous/Mac_Client/bin/Debug/Newtonsoft.Json.dll

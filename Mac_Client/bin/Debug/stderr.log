@@ -1,1 +1,1 @@
-2017-08-22 09:24:02.787 Mac_Client[3981:478967] error: * Assertion at /Users/builder/data/lanes/4991/4a279c9a/source/xamarin-macios/external/mono/mono/mini/debugger-agent.c:3957, condition `tls' not met
+2017-08-22 15:02:51.959 Mac_Client[5409:624862] error: * Assertion at /Users/builder/data/lanes/4991/4a279c9a/source/xamarin-macios/external/mono/mono/mini/debugger-agent.c:3957, condition `tls' not met

@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{1F4DDDC9-FE66-4ABC-8D59-B0E7A7ED67A3}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="WatchClipboard.cs" Line="91" Column="16" />
-      <File FileName="MainActivity.cs" Line="55" Column="42" />
-      <File FileName="../Mac_Client/AppDelegate.cs" Line="138" Column="4" />
+      <File FileName="WatchClipboard.cs" Line="143" Column="45" />
+      <File FileName="MainActivity.cs" Line="26" Column="15" />
+      <File FileName="../Mac_Client/AppDelegate.cs" Line="138" Column="9" />
+      <File FileName="Properties/AssemblyInfo.cs" Line="36" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

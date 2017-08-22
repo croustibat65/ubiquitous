@@ -14,12 +14,7 @@ namespace Mac_Client
 		[Outlet]
 		AppKit.NSMenu statusMenu { get; set; }
 
-		[Action ("HelloWorld:")]
-		partial void HelloWorld (Foundation.NSObject sender);
 
-		[Action ("RUIR:")]
-		partial void RUIR (Foundation.NSObject sender);
-		
 		void ReleaseDesignerOutlets ()
 		{
 			if (statusMenu != null) {

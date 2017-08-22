@@ -12,3 +12,5 @@ background service iOS:     -> https://forums.xamarin.com/discussion/5664/backgr
 background service android: -> https://developer.xamarin.com/recipes/android/fundamentals/service/create_a_simple_service/
 
 clipboard change android:   -> https://stackoverflow.com/questions/22277598/permanently-listen-to-clipboard-changes
+
+silent notification iOS:    -> https://stackoverflow.com/questions/36694963/what-is-silent-push-notification-when-does-the-device-receive-it

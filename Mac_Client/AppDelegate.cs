@@ -26,16 +26,11 @@ namespace Mac_Client
 		private static string[] pboardTypes = new string[] { "NSStringPboardType" };
 		static nint timeCount;
 		static private WebSocket client;
-        static string pwd;
 
 
         // Entry Point
 		public override void DidFinishLaunching(NSNotification notification)
 		{
-            // Open Password Information
-            StreamReader Sr = File.OpenText("../../../id.txt");
-            Sr.ReadLine(); pwd = Sr.ReadLine();
-
 			// Websocket Server
 			//client = new WebSocket ("ws://34.248.0.158:8080"); 
 			client = new WebSocket("ws://192.168.1.64:8080");
@@ -51,7 +46,7 @@ namespace Mac_Client
 
 			// Copy/Sending
 			timeCount = pasteboard.ChangeCount;
-			var sampleTimer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.25), delegate
+			var sampleTimer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.5), delegate
 			{
 				if (timeCount != pasteboard.ChangeCount)
 				{
@@ -60,7 +55,14 @@ namespace Mac_Client
 				}
 			});
 
+            // Losing connexion Management
+            client.OnClose += ConnexionLost;
+			client.OnError += ConnexionLost;
+
+
 		}
+
+
 
         // Connect + Send ID
         public void serverConnexion()
@@ -70,6 +72,7 @@ namespace Mac_Client
 			string sMsgJson = JsonConvert.SerializeObject(message);
 			client.Send(sMsgJson);
 
+            // Connection test
             if (client.IsAlive)
             {
 				connexionStatus.Title = "Status: OnLine";
@@ -89,7 +92,7 @@ namespace Mac_Client
         public void PasteClipboard(object sender, MessageEventArgs e)
 		{
             // Decryption
-            string decryptedMsg = StringCipher.Decrypt(e.Data, pwd);
+            string decryptedMsg = StringCipher.Decrypt(e.Data, MainClass.pwd);
 
             // Pasteboard Management
             InvokeOnMainThread(() =>
@@ -99,8 +102,6 @@ namespace Mac_Client
                 timeCount = pasteboard.ChangeCount;
             });
 
-            // Debug
-			Console.WriteLine(decryptedMsg + " received");
 
 		}
 
@@ -109,7 +110,7 @@ namespace Mac_Client
 		public static void sendClipboard()
 		{
             // Encryption of the pasteboard
-            string encryptedMsg = StringCipher.Encrypt(pasteboard.GetStringForType(pboardTypes[0]), pwd);
+            string encryptedMsg = StringCipher.Encrypt(pasteboard.GetStringForType(pboardTypes[0]), MainClass.pwd);
 
             // JSON
 			MsgJSON message = new MsgJSON("msg");
@@ -118,8 +119,8 @@ namespace Mac_Client
 
 			// Sending 
 			client.Send(sMsgJson);
-			Console.WriteLine("Clipboard: '" + pasteboard.GetStringForType(pboardTypes[0]) + "' sent");
 		}
+
 
 		// Open or close the connexion
         partial void openCloseConnexion(NSObject sender)
@@ -127,14 +128,18 @@ namespace Mac_Client
             if (client.IsAlive)
             {
 				client.Close();
-                connexionStatus.Title = "Status: OffLine";
-				connectDisconnectTitle.Title = "Log In";
 			}
             else
             {
                 serverConnexion();
 			}
+		}
 
+        // When Connexion is Lost
+        public void ConnexionLost(object sender, EventArgs e)
+        {
+			connexionStatus.Title = "Status: OffLine";
+			connectDisconnectTitle.Title = "Log In";
 		}
 
 
