@@ -24,20 +24,21 @@ namespace Mac_Client
 		// Private Variables
 		static public NSPasteboard pasteboard;// = NSPasteboard.GeneralPasteboard;
 		private static string[] pboardTypes = new string[] { "NSStringPboardType" };
-		static private WebSocket client;
 		static nint timeCount;
+		static private WebSocket client;
         static string pwd;
+
 
         // Entry Point
 		public override void DidFinishLaunching(NSNotification notification)
 		{
             // Open Password Information
-            StreamReader Sr = File.OpenText("../../../../../id.txt");
+            StreamReader Sr = File.OpenText("../../../id.txt");
             Sr.ReadLine(); pwd = Sr.ReadLine();
 
 			// Websocket Server
 			//client = new WebSocket ("ws://34.248.0.158:8080"); 
-			client = new WebSocket("ws://192.168.0.39:8080");
+			client = new WebSocket("ws://192.168.1.64:8080");
 
             // Connexion + send ID
             serverConnexion();
@@ -88,19 +89,18 @@ namespace Mac_Client
         public void PasteClipboard(object sender, MessageEventArgs e)
 		{
             // Decryption
-            string encryptedMsg = e.Data;
-            string decryptedMsg = StringCipher.Decrypt(encryptedMsg, pwd);
+            string decryptedMsg = StringCipher.Decrypt(e.Data, pwd);
 
             // Pasteboard Management
             InvokeOnMainThread(() =>
             {
-                pasteboard.SetStringForType(decryptedMsg, pboardTypes[0]);
+				pasteboard.ClearContents();
+				pasteboard.SetStringForType(decryptedMsg, pboardTypes[0]);
                 timeCount = pasteboard.ChangeCount;
             });
 
             // Debug
 			Console.WriteLine(decryptedMsg + " received");
-
 
 		}
 

@@ -1,7 +1,14 @@
-clipboard manager android -> (bottom) https://forums.xamarin.com/discussion/41374/is-there-a-clipboard-plug-in-component-for-xamarin-forms
-                          -> https://forums.xamarin.com/discussion/56365/how-to-access-android-phone-clipboard
+clipboard manager android:  -> (bottom) https://forums.xamarin.com/discussion/41374/is-there-a-clipboard-plug-in-component-for-xamarin-forms
+                            -> https://forums.xamarin.com/discussion/56365/how-to-access-android-phone-clipboard
 
 
-notification icon mac:    -> https://stackoverflow.com/questions/17625291/creating-a-windowless-menu-bar-icon-application-in-monomac-xamarin-c-sharp   (with example)                        
+notification icon mac:      -> https://stackoverflow.com/questions/17625291/creating-a-windowless-menu-bar-icon-application-in-monomac-xamarin-c-sharp   (with example)                        
 
-symmetric encryption:    -> https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
+symmetric encryption:       -> https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
+
+background service iOS:     -> https://forums.xamarin.com/discussion/5664/background-service-for-ios-in-c      
+                            -> https://developer.xamarin.com/guides/ios/application_fundamentals/backgrounding/ios_backgrounding_techniques/updating_an_application_in_the_background/
+
+background service android: -> https://developer.xamarin.com/recipes/android/fundamentals/service/create_a_simple_service/
+
+clipboard change android:   -> https://stackoverflow.com/questions/22277598/permanently-listen-to-clipboard-changes

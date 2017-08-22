@@ -1,5 +1,9 @@
 ﻿using AppKit;
-
+using System;
+using WebSocketSharp;
+using Newtonsoft.Json;
+using Foundation;
+using System.IO;
 
 
 namespace Mac_Client
@@ -11,7 +15,7 @@ namespace Mac_Client
 		static void Main(string[] args)
 		{
 			NSApplication.Init();
-   			NSApplication.Main(args);
+			NSApplication.Main(args);
 		}	
 	}
 

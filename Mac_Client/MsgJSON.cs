@@ -13,7 +13,7 @@ namespace Mac_Client
 		// constructor
 		public MsgJSON(string s)
 		{
-			name = File.OpenText("../../../../../id.txt").ReadLine();
+			name = File.OpenText("../../../id.txt").ReadLine();
 			msg = null;
 			type = s;
 		}
